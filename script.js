@@ -9,8 +9,9 @@ function fillBoard() {
   //TODO: randomly assign positions to the tiles on the screen call
   // addTileToBoard here
   // Hint: You can use a forEach or a for loop
-for (var i=0; i > 3; i++){
-  addTileToBoard(cards[i])
+  for(var i=0; i<3; i++) {
+    
+  addTileToBoard(cards[0]);
 }
 
 };
@@ -33,8 +34,9 @@ function shuffle(array) {
 };
 
 function addTileToBoard(element) {
-  //TODO: randomly assign ids to the divs
-  var div =  "<div id=\"" + assignments +"\" class=\""+ element + " token><img src='rock.jpg'</div>";
+  //TODO: randomly assign ids to the divs 
+  alert("im sleepy")
+  var div =  "<div id=\"class=\""+ element + " token><img src='rock.jpg'></div>";
   $(".game").append(div);
   assignments ++
 };
@@ -62,11 +64,15 @@ function evaluate( evt ) {
 
 $(document).ready(function() {
   console.log("we are here")
+  fillBoard();
   function bop(elm) {
       $(elm).fadeOut('fast').delay(1).fadeIn('fast');
   };
+    console.log("we are here.")
 
-  fillBoard();
+
+  
+  console.log("we are now here")
 
   $('.token').click( function(e) {
       var element = e.toElement.classList[0]
